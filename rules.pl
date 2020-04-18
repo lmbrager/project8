@@ -10,7 +10,7 @@ payment(F, L, P) :- hourly(F, L, Hours, Rate),
   Hours =< 40,
   P is Hours*Rate.
 payment(F, L, P) :- hourly(F, L, Hours, Rate),
-  Hours =< 40, Hours>40,
+  Hours =< 50, Hours>40,
   P is 40*Rate + (Hours-40)*Rate*1.5.
 payment(F, L, P) :- hourly(F, L, Hours, Rate),
   Hours > 50,
