@@ -8,7 +8,7 @@ max(Op, Ref, Max) :- (
 ),
 max_list(List, Max).
 
-min(Op, Ref, Max) :- (
+min(Op, Ref, Min) :- (
                 Op='eq', findall(Z, (payment(X, Y, Z), Z=:=Ref), List);
                 Op='ne', findall(Z, (payment(X, Y, Z), Z=\=Ref), List);
                 Op='gt', findall(Z, (payment(X, Y, Z), Z>Ref), List);
